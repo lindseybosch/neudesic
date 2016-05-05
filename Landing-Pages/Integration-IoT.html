@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Big Data & Analytics Solutions Roadshow</title>
+
+  <!-- Bootstrap -->
+  <link href="http://www.neudesic.com/scripts/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    h1, h2, h3 {font-family: "Arial";}
+
+    /* buttons start */
+    * {
+      -webkit-border-radius: 0 !important;
+       -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+    }
+    .btn {
+      padding: 11px 24px;
+      border: 0 none;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .schedule-cities .btn {
+      padding: 7px 20px;
+      float: right;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      font-size: 14px;
+      font-weight: 100;
+      margin: 5px;
+    }
+    .btn:focus, .btn:active:focus, .btn.active:focus {
+      outline: 0 none;
+    }
+    .btn-primary {
+      background: #f58220;
+      color: #ffffff;
+    }
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+      background: #e86e05;
+    }
+    .btn-primary:active, .btn-primary.active {
+      background: #f58220;
+      box-shadow: none;
+    }
+    .btn-primary:active:focus, .btn-primary:active:hover {
+      background-color: #f58220;
+      border-color: #f58220;
+    }
+
+    .agenda-close .btn {
+      padding: 5px 5px;
+      border: 1px solid #bababa;
+      font-weight: 100;
+      letter-spacing: 0px;
+      line-height: 9px;
+      color: #ffffff;
+      margin-right: 0px;
+    }
+    .agenda-close .btn-primary {
+      background: #545353;
+    }
+    .agenda-close .btn-primary:hover, .agenda-close .btn-primary:focus, .agenda-close .btn-primary:active, .agenda-close .btn-primary.active, .agenda-close .open > .dropdown-toggle.btn-primary {
+      background: #545353;
+      border-color: #ffffff;
+    }
+    .agenda-close .btn-primary:active, .agenda-close .btn-primary.active {
+      background: #545353;
+      box-shadow: none;
+    }
+    .agenda-close .btn-primary:active:focus, .agenda-close .btn-primary:active:hover {
+      background-color: #545353;
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+
+    .rsfooter .btn {
+      padding: 6px 9px;
+      border: 1px solid #bababa;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-right: 8px;
+    }
+    .rsfooter .btn-primary {
+      background: #545353;
+    }
+    .rsfooter .btn-primary:hover, .rsfooter .btn-primary:focus, .rsfooter .btn-primary:active, .rsfooter .btn-primary.active, .rsfooter .open > .dropdown-toggle.btn-primary {
+      background: #545353;
+      border-color: #ffffff;
+    }
+    .rsfooter .btn-primary:active, .rsfooter .btn-primary.active {
+      background: #545353;
+      box-shadow: none;
+    }
+    .rsfooter .btn-primary:active:focus, .rsfooter .btn-primary:active:hover {
+      background-color: #545353;
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+    .button-icon-sm {
+      border: 0px;
+      width: 20px;
+      height: auto;
+    }
+    .button-icon {
+      margin-right: 8px;
+        width: 30px;
+        height: auto;
+    }
+    /* buttons end */
+
+    .jumbotron .h1, .jumbotron h1 {
+      font-size: 49px !important;
+    }
+    .jumbotron .h2, .jumbotron h2, h2 {
+      font-size: 40px !important;
+    }
+    .jumbotron .h3, .jumbotron h3 {
+/*      font-size: 30px !important; */
+    }
+    h4 {
+      font-size: 17px !important;
+    }
+    .header-bg {
+      width: 100%;
+      height: 533px;
+      background-size: cover;
+        background-position: center bottom;
+    }
+    #header-fg-container {
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .header-fg {
+        height: 105.5%;
+      background-repeat: no-repeat;
+      background-size: cover;
+        background-position: left bottom;
+    }
+    #grad1 {
+      z-index: 1;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      min-height: 200px;
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0)); /* Standard syntax (must be last) */
+    }
+
+    .header-text {
+      z-index: 100;
+      position: relative;
+      height: 100%;
+    }
+    .header-maintext {
+      margin-top: 20px;
+    }
+    .header-subtext p {
+      color: #00467e;
+      margin-top: 20px;
+      font-size: 25px !important;
+    }
+    .header-right-logo {
+      text-align: right;
+    }
+    .header-award {
+      position: absolute;
+      bottom: -72px;
+      width: 50%;
+    }
+
+    .bottom-bar {
+      height: 35px;
+      background-color: #f58220;
+      position: relative;
+      z-index: -1;
+    }
+
+    #agenda-show-am, #agenda-show-pm {
+      width: 75%;
+      margin: auto;
+    }
+    .agenda-table td {
+      padding: 10px;
+      vertical-align: text-top;
+    }
+    .agenda-time {
+      font-weight: bold;
+      text-align: right;
+      white-space: nowrap;
+      color: #f58220;
+    }
+    .agenda-desc {
+      text-align: left;
+    }
+
+    .schedule-cities {
+      background-color: #ebebeb;
+      border: 8px solid #ffffff;
+      padding: 10px 20px 0px 20px;
+    }
+    .schedule-cities h3 {
+      font-weight: lighter;
+      margin-top: 2px;
+    }
+    .schedule-cities h3 small {
+      font-size: 80%;
+    }
+    .schedule-dates {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .speakers .col-xs-6 {
+      height: 165px;
+    }
+    .speakers .col-md-4 {
+       padding-right: 0px;
+       padding-left: 0px;
+    }
+    .speakerImg {
+          width: 150px !important;
+          height: auto;
+    }
+
+    @media screen and (min-width: 1720px) {
+      .header-fg {
+        background-size: contain;
+      }
+    }
+    @media screen and (min-width: 990px) {
+      .header-bg {
+        background-image: url("http://pages3.neudesic.com/rs/413-AFH-460/images/roadshow-main-bg.jpg");
+      }
+      .header-fg {
+        background-image: url("http://pages3.neudesic.com/rs/413-AFH-460/images/roadshow-main-fg.png");
+      }
+    }
+    @media screen and (max-width: 990px) {
+      .header-bg {
+        background-image: url("http://pages3.neudesic.com/rs/413-AFH-460/images/roadshow-main-bg-sm.jpg");
+      }
+      .header-fg-container, .br-none{
+        display: none;
+      }
+      .header-maintext {
+        margin-top: 10px;
+      }
+      .header-subtext p {
+        margin-top: 10px;
+        font-size: 18px !important;
+      }
+
+      .jumbotron .h1, .jumbotron h1 {
+        font-size: 36px !important;
+      }
+
+      .speakers {
+          display: inline-block;
+        margin-left: 10%;
+        margin-bottom: 20px;
+      }
+      .speakers h3 {
+          margin-top:0px;
+      }
+      .speakers img {
+          width: 70% !important;
+      }
+        }
+    @media only screen and (min-width: 771px) and (max-width: 990px)  {
+      .schedule-cities {
+        min-height:150px;
+      }
+    }
+    @media only screen and (max-width: 771px) {
+      .header-right-logo {
+        text-align: left;
+        margin-top: 20px;
+      }
+      .header-award {
+        bottom: -54px;
+      }
+      #grad1 {
+        min-height: 300px;
+      }
+      #agenda-show-am, #agenda-show-pm {
+        width: 100%;
+        margin: auto;
+      }
+      .schedule .row {
+        display: initial !important;
+      }
+    }
+    @media screen and (max-width: 585px) {
+      .jumbotron .h1, .jumbotron h1 {
+        font-size: 25px !important;
+      }
+      .speakers {
+        margin-left: 0px;
+        margin-bottom: 20px;
+      }
+      .speakers h3 {
+        font-weight: 100;
+      }
+    }
+  </style>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://www.neudesic.com/scripts/js/bootstrap/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48074856-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['pages3.neudesic.com'] );
+
+  ga('send', 'pageview');
+
+</script>
+<script>
+  function sendMailto() {
+    var formattedSubject = "Have a Look at this Big Data Solutions Day Event";
+  var formattedBody = "Hi,\n \n I was just looking at this upcoming Big Data and Advanced Analytics event and I thought you may find it interesting.\n \n Take a look at the agenda:\n \n 10:00 AM - Check in\n 10:30 AM - Beyond Traditional BI: Use cases for leveraging ALL data\n 11:30 AM - Lunch\n 12:30 PM - Big Data Processing: A deep dive into Hadoop/Spark and Azure SQL DW\n 1:15 PM - Big Data-as-a-Service Demos:\n           - Provisioning HDInsight clusters, Azure SQL DW databases, Machine Learning, Stream Analytics and Power BI\n           - Independent scaling, compute and storage\n           - Pricing it up: Deriving insights from terabytes of data for under $10/day\n 2:45 PM - Big Data and IoT: Advanced analytics deployment stories and reference architectures\n 4:00 PM - Open Q&A\n \n You can join by registering here: http:\/\/www.neudesic.com/bigdataday2.0\/\n \n Thanks!\n \n";
+    var mailToLink = "mailto:?subject=" + encodeURIComponent(formattedSubject) + "&body=" + encodeURIComponent(formattedBody);
+   window.location.href = mailToLink;
+  }
+</script>
+</head>
+<body>
+  <div class="jumbotron header-bg" style="position:relative;">
+    <div id="grad1"></div>
+    <div id="header-fg-container">
+      <div class="col-xs-5"></div>
+      <div class="col-xs-7 header-fg"></div>
+    </div>
+    <div class="container header-text">
+      <div class="row">
+        <div class="col-sm-7"><a href="http://www.neudesic.com" target=_blank><img src="http://www.neudesic.com/wp-content/uploads/2014/09/neudesic.png"></a></div>
+        <div class="col-sm-5 header-right-logo"><a href="http://www.neudesic.com" target=_blank><img src="http://www.neudesic.com/wp-content/uploads/2015/07/fd_logos_microsoft.png"></a></div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-7 header-maintext">
+          <h1>Integrating IoT: The Roadshow</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-5 header-subtext">
+          <p>Readying the Enterprise to Drive Business Value from IoT</p>
+        </div>
+      </div>
+<!--       <div class="row header-award">
+        <div class="col-sm-12">
+          <img class="img-responsive" src="http://pages3.neudesic.com/rs/413-AFH-460/images/ms-partner-2015-winner.jpg">
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="bottom-bar" style="top: -30px;"></div>
+  <div class="container" style="margin-bottom: 20px;">
+    <div class="row">
+      <div class="col-md-12" style="text-align:center">
+        <p class="lead"><strong><span style="white-space: nowrap;">Information Management</span> | <span style="white-space: nowrap;">Big Data Stores</span> | <span style="white-space: nowrap;">Machine Learning</span> | Hadoop/Spark | <span style="white-space: nowrap;">Data Visualization</span></strong></p>
+        <p class="lead"><span style="font-size:120%">Join leading architects for an in-depth exploration of Big Data solutions that leverage Microsoft technology, and discover architectural best practices for applying those solutions to your projects.</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron" style="background-color: #00467e">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="text-align:center">
+          <h2 style="color:#ffffff;">Agenda</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-1" id="agenda-am" style="text-align:center; color:#ffffff">
+          <h3 style="color:#f58220; font-weight:bold;">Morning</h3>
+          <p>For business managers, architects, developers, analysts and data scientists.</p>
+
+          <div class="collapse" id="agenda-show-am">
+            <div class="well" style="background-color: #00467e; color: #ffffff; position: relative;">
+              <div class="agenda-close" style="display:none; position:absolute; top: -1px; right: -1px;"><button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#agenda-show-am, #agenda-show-pm" aria-expanded="false" aria-controls="#agenda-show-am,#agenda-show-pm" data-complete-text="x" id="agenda-button1">x</button></div>
+              <div>
+                <table class="agenda-table">
+                  <tr><td class="agenda-time">10:00 AM</td><td>-</td><td class="agenda-desc">Morning check-in</td></tr>
+                  <tr><td class="agenda-time">10:30 AM</td><td>-</td><td class="agenda-desc">Beyond Traditional BI: Use cases for leveraging ALL data</td></tr>
+                  <tr><td class="agenda-time">11:30 AM</td><td>-</td><td class="agenda-desc">Lunch</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-4 col-sm-offset-2" id="agenda-pm" style="text-align:center; color:#ffffff">
+          <h3 style="color:#f58220; font-weight:bold;">Afternoon</h3>
+          <p>A Deeper Dive: For architects, developers and data scientists.</p>
+
+          <div class="collapse" id="agenda-show-pm">
+            <div class="well" style="background-color: #00467e; color: #ffffff; position: relative;">
+              <div class="agenda-close" style="display:none; position:absolute; top: -1px; right: -1px;"><button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#agenda-show-am, #agenda-show-pm" aria-expanded="false" aria-controls="#agenda-show-am,#agenda-show-pm" data-complete-text="x" id="agenda-button2">x</button></div>
+              <div>
+                <table class="agenda-table">
+                  <tr><td class="agenda-time">12:30 PM</td><td>-</td><td class="agenda-desc">Big Data Processing: A deep dive in Hadoop/Spark & Azure SQL DW</td></tr>
+                  <tr><td class="agenda-time">1:30 PM</td><td>-</td>
+                    <td class="agenda-desc">
+                      <strong>Big Data-as-a-Service Demos:</strong><br/>
+                        <ul>
+                          <li>Provisioning HDinsight clusters, Azure SQL DW databases, Machine Learning, Stream Analytics & Power BI</li>
+                          <li>Enabling independent scaling compute & storage</li>
+                          <li>Pricing it up: Deriving insights from terabytes of data for under $10/day</li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr><td class="agenda-time">3:00 PM</td><td>-</td><td class="agenda-desc">Big Data and IoT: Advanced Analytics deployment stories and reference architectures</td></tr>
+                  <tr><td class="agenda-time">4:00 PM</td><td>-</td><td class="agenda-desc">Open Q&amp;A</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="text-align:center">
+          <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#agenda-show-am, #agenda-show-pm" aria-expanded="false" aria-controls="#agenda-show-am,#agenda-show-pm" data-complete-text="Close Agenda" id="agenda-button">Open Full Agenda</button>
+          <script>
+          var switchcnt = 0;
+          var jq = $.noConflict();
+          jq('#agenda-button').on('click', function () {
+            switchcnt++;
+            var switchon = switchcnt % 2;
+            if (switchon == 1) {
+              jq(this).button('complete'); // button text will be "finished!"
+              jq("#agenda-am").attr('class', 'col-sm-12');
+              jq("#agenda-pm").attr('class', 'col-sm-12');
+            }
+            else {
+              jq("#agenda-am").attr('class', 'col-sm-4 col-sm-offset-1');
+              jq("#agenda-pm").attr('class', 'col-sm-4 col-sm-offset-2');
+              jq(this).button('reset');
+            }
+          })
+          jq('#agenda-button1').on('click', function () {
+            switchcnt++;
+            var switchon = switchcnt % 2;
+            if (switchon == 1) {
+              jq(this).button('complete'); // button text will be "finished!"
+            }
+            else {
+              jq('#agenda-button').button('reset');
+            }
+          })
+          jq('#agenda-button2').on('click', function () {
+            switchcnt++;
+            var switchon = switchcnt % 2;
+            if (switchon == 1) {
+              jq(this).button('complete'); // button text will be "finished!"
+            }
+            else {
+              jq('#agenda-button').button('reset');
+            }
+          })
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="text-align:center">
+        <h2 style="color: #00467e;">Upcoming Cities</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container schedule" style="margin-bottom: 30px;">
+    <div class="row">
+      <div class="col-sm-4 schedule-cities">
+        <h3>Denver, CO <small>(Downtown)</small></h3>
+        <p><span class="schedule-dates">May 10, 2016</span></p>
+        <a href="http://pages3.neudesic.com/BigDataDay2.0-Denver-downtown.html"><button type="button" class="btn btn-primary btn-lg">Register >></button></a>
+      </div>
+      <div class="col-sm-4 schedule-cities">
+        <h3>Denver, CO <small>(Denver Tech Center)</small></h3>
+        <p><span class="schedule-dates">May 11, 2016</span></p>
+        <a href="http://pages3.neudesic.com/BigDataDay2.0-Denver-tech-center.html"><button type="button" class="btn btn-primary btn-lg">Register >></button></a>
+      </div>
+      <div class="col-sm-4 schedule-cities">
+        <h3>Philadelphia, PA</h3>
+        <p><span class="schedule-dates">Jun. 14, 2016</span></p>
+        <a href="http://pages3.neudesic.com/BigDataDay2.0-Philadelphia-20160614.html"><button type="button" class="btn btn-primary btn-lg">Register >></button></a>
+      </div>
+      <div class="col-sm-4 schedule-cities">
+        <h3>New York, NY</h3>
+        <p><span class="schedule-dates">Jun. 15, 2016</span></p>
+        <a href="http://pages3.neudesic.com/BigDataDay2.0-NewYork-20160615.html"><button type="button" class="btn btn-primary btn-lg">Register >></button></a>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>Dallas, TX</h3>
+        <p><span class="schedule-dates">TBD</span></p>
+        <button type="button" class="btn btn-primary btn-lg disabled">Coming Soon</button>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>Houston, TX</h3>
+        <p><span class="schedule-dates">TBD</span></p>
+        <button type="button" class="btn btn-primary btn-lg disabled">Coming Soon</button>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>Atlanta, GA</h3>
+        <p><span class="schedule-dates">TBD</span></p>
+        <button type="button" class="btn btn-primary btn-lg disabled">Coming Soon</button>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>Phoenix, AZ</h3>
+        <p><span class="schedule-dates">TBD</span></p>
+        <button type="button" class="btn btn-primary btn-lg disabled">Coming Soon</button>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>Portland, OR</h3>
+        <p><span class="schedule-dates">TBD</span></p>
+        <button type="button" class="btn btn-primary btn-lg disabled">Coming Soon</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="text-align: center">
+        <h2 style="color: #00467e;">Past Cities</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container schedule" style="margin-bottom: 30px;">
+    <div class="row">
+      <div class="col-sm-4 schedule-cities">
+        <h3>Seattle, WA <small>(Downtown)</small></h3>
+        <p><span class="schedule-dates">Apr. 21, 2016</span></p>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>San Diego, CA</h3>
+        <p><span class="schedule-dates">Apr. 7, 2016</span></p>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>Chicago, IL</h3>
+        <p><span class="schedule-dates">Mar. 31, 2016</span></p>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>Rosemont, IL</h3>
+        <p><span class="schedule-dates">Mar. 30, 2016</span></p>
+      </div>
+
+      <div class="col-sm-4 schedule-cities">
+        <h3>Orange County, CA</h3>
+        <p><span class="schedule-dates">Feb. 11, 2016</span></p>
+      </div>
+            <div class="col-sm-4 schedule-cities">
+        <h3>Los Angeles, CA</h3>
+        <p><span class="schedule-dates">Feb. 10, 2016</span></p>
+      </div>
+
+            <div class="col-sm-4 schedule-cities">
+        <h3>Phoenix, AZ</h3>
+        <p><span class="schedule-dates">Jan. 20, 2016</span></p>
+      </div>
+      <div class="col-sm-4 schedule-cities">
+        <h3>Houston, TX</h3>
+        <p><span class="schedule-dates">Dec. 10, 2015</span></p>
+      </div>
+      <div class="col-sm-4 schedule-cities">
+        <h3>Dallas, TX</h3>
+        <p><span class="schedule-dates">Dec. 9, 2015</span></p>
+      </div>
+        </div>
+  </div>
+  <div class="jumbotron" style="background-color: #ebebeb; margin-bottom: 0px;">
+    <div class="container">
+      <div class="row" style="margin-bottom: 20px;">
+        <div class="col-md-12" style="text-align:center">
+          <h2 style="color: #00467e;">Meet the Big&nbsp;Data Roadshow&nbsp;Experts</h2>
+        </div>
+      </div>
+      <div class="row speakers">
+        <div class="col-md-4">
+          <div class="col-xs-6 text-right">
+            <img src="http://pages3.neudesic.com/rs/413-AFH-460/images/tom.png" class="speakerImg">
+          </div>
+          <div class="col-xs-6">
+            <h4 style="font-weight: bold;">Tom Marek</h4><p style="font-size: 14px;">Senior Solution Partner<br>BI & Big Data<br>Neudesic</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="col-xs-6 text-right">
+            <img src="http://pages3.neudesic.com/rs/413-AFH-460/images/orion.png" class="speakerImg">
+          </div>
+          <div class="col-xs-6">
+            <h4 style="font-weight: bold;">Orion Gebremedhin</h4><p style="font-size: 14px;">Director of Technology<br>Data & Analytics<br>Neudesic</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="col-xs-6 text-right">
+            <img src="http://pages3.neudesic.com/rs/413-AFH-460/images/kola.png" class="speakerImg">
+          </div>
+          <div class="col-xs-6">
+            <h4 style="font-weight: bold;">Kola Bolarin</h4><p style="font-size: 14px;">Solution Partner<br>BI & Big Data<br>Neudesic</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="col-xs-6 text-right">
+            <img src="http://pages3.neudesic.com/rs/413-AFH-460/images/Brendon.png" class="speakerImg">
+          </div>
+          <div class="col-xs-6">
+            <h4 style="font-weight: bold;">Brendon Birdoes</h4><p style="font-size: 14px;">Senior Solution Partner<br/>Custom Application Development, Cloud<br/>Neudesic</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="col-xs-6 text-right">
+            <img src="http://pages3.neudesic.com/rs/413-AFH-460/images/kirk.png" class="speakerImg">
+          </div>
+          <div class="col-xs-6">
+            <h4 style="font-weight: bold;">Kirk Nason</h4><p style="font-size: 14px;">Solution Partner<br/>BI & Data Visualization<br>Neudesic</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="col-xs-6 text-right">
+            <img src="http://pages3.neudesic.com/rs/413-AFH-460/images/michael.png" class="speakerImg">
+          </div>
+          <div class="col-xs-6">
+            <h4 style="font-weight: bold;">Michael Benoit</h4><p style="font-size: 14px;">Solution Partner<br>Cloud & IoT<br>Neudesic</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="bottom-bar"></div>
+  <div class="jumbotron rsfooter" style="background-color: #545353; color: #ffffff; margin-bottom: 0px; padding-bottom: 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" style="margin-bottom: 30px;">
+          <p class="lead">Contact us</p>
+          <p style="color: #bababa">Questions? <br class="br-none" />Contact Mike Rossi</p>
+          <a href="mailto:mike.rossi@neudesic.com"><button type="button" class="btn btn-primary btn-lg">EMAIL</button></a>
+        </div>
+        <div class="col-md-4" style="margin-bottom: 30px;">
+          <p class="lead">Stay tuned</p>
+          <p style="color: #bababa">Connect with us and <br class="br-none" />stay in the loop</p>
+          <a href="http://www.linkedin.com/company/neudesic" target=_blank><button type="button" class="btn btn-primary btn-lg"><img src="http://pages3.neudesic.com/rs/413-AFH-460/images/linkedin-white-sm.png" class="button-icon-sm"></button></a>
+          <a href="https://twitter.com/Neudesic" target=_blank><button type="button" class="btn btn-primary btn-lg"><img src="http://pages3.neudesic.com/rs/413-AFH-460/images/twitter-white-sm.png" class="button-icon-sm"></button></a>
+          <a href="https://www.facebook.com/Neudesic" target=_blank><button type="button" class="btn btn-primary btn-lg"><img src="http://pages3.neudesic.com/rs/413-AFH-460/images/facebook-white-sm.png" class="button-icon-sm"></button></a>
+
+        </div>
+        <div class="col-md-4" style="margin-bottom: 30px;">
+          <p class="lead">Share this event</p>
+          <p style="color: #bababa">Spread the word. Let your colleagues know about this event.</p>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://pages3.neudesic.com/Big-Data-Solutions-Day-2.html&title=Big%20Data%20and%20Advanced%20Analytics%20Roadshow&source=www.neudesic.com" target=_blank><img src="http://pages3.neudesic.com/rs/413-AFH-460/images/linkedin-white.png" class="button-icon"></a>
+          <a href="http://twitter.com/intent/tweet?status=Big%20Data%20and%20Advanced%20Analytics%20Roadshow+http://pages3.neudesic.com/Big-Data-Solutions-Day-2.html" target=_blank><img src="http://pages3.neudesic.com/rs/413-AFH-460/images/twitter-white.png" class="button-icon"></a>
+          <a href="http://www.facebook.com/share.php?u=http://pages3.neudesic.com/Big-Data-Solutions-Day-2.html&title=Big%20Data%20and%20Advanced%20Analytics%20Roadshow" target=_blank><img src="http://pages3.neudesic.com/rs/413-AFH-460/images/facebook-white.png" class="button-icon"></a>
+          <img src="http://pages3.neudesic.com/rs/413-AFH-460/images/email-white.png" class="button-icon" onclick="sendMailto()" style="cursor: pointer;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p style="color: #bababa; font-size:12px; margin-top: 20px;">&copy; 2016 Neudesic LLC, All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="http://www.neudesic.com/wp-content/themes/Avada-Child-Theme/scripts/js/transferquery.js"></script>
+  </body>
+</html>
